@@ -4,6 +4,8 @@ import hw2 as hw2
 
 class TestHW2(unittest.TestCase):
     def test_shiftcipher(self):
+        # check if the shift cipher function yields correct ciphertext
+        # given plaintext and shift value, k
         print("\n\nShift Cipher Test")
         plaintext = 'SSOEATBENEDUMHALLOHARASTREET'
         k = 5
@@ -18,7 +20,10 @@ class TestHW2(unittest.TestCase):
             print("Test failed")
 
     def test_randomsubstitutioncipher(self):
-        print("\n\nRandom Subsitution Cipher Test")
+        # test random substitution cipher function
+        # and the corresponding decrypting function
+        # given plaintext
+        print("\n\nRandom Substitution Cipher Test")
         plaintext = 'PENNSYLVANIA'
         [ciphertext, encodedalphabet] = hw2.randomsubstitution(plaintext)
         print("Alphabet:  ", hw2.ALPHABET)
